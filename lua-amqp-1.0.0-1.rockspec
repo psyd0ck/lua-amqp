@@ -1,8 +1,8 @@
 package = "lua-amqp"
-version = "1.0.0-1"
+version = "1.0.0"
 source = {
    url = "git+https://github.com/psyd0ck/lua-amqp.git",
-   branch = "v1.0.0-1"
+   branch = "v1.0.0"
 }
 description = {
    summary = "Lua AMQP 0.9.1 client",

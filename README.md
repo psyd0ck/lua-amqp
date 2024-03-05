@@ -6,18 +6,19 @@ It is a fork of :
 * https://github.com/mengz0/amqp
 * https://github.com/ZigzagAK/amqp
 * https://github.com/4mig4/lua-amqp
+* https://github.com/gsdenys/amqp-client
 
 This library can be used with LuaJIT and does not have to be used only in OpenResty.
 
+## Update
+ Now supports the message_id of the publish properties, fixing the error in the timestamp properties
 ## Usage
 
 As this library is already published at [Luarocks](https://luarocks.org), you can use this through following command:
 
 ```sh
-luarocks install amqp-client
+luarocks install lua-amqp
 ```
-
-then, follow this [Wiki Documentation](https://github.com/gsdenys/amqp-client/wiki) to know how to use this library.
 
 ## Develop
 
@@ -54,7 +55,7 @@ config.vm.network "forwarded_port", guest: 672, host: 672
 So, let's clone this repository inside [lua-vagrant](https://github.com/gsdenys/lua-vagrant) project and start it.
 
 ```sh
-git clone https://github.com/gsdenys/amqp-client.git
+git clone https://github.com/psyd0ck/lua-amqp.git
 
 vagrant up #it takes a lot of time 
 vagrant ssh
@@ -69,8 +70,8 @@ sh install.sh
 Your environment is ready now. the amqp-client project is in the _/lua/amqp-client_ directory. Go to the project and start to use it.
 
 ```sh
-#go to amqp-client source code
-cd /lua/amqp-client
+#go to lua-amqp source code
+cd /lua/lua-amqp
 ```
 
 ### Building
@@ -113,7 +114,7 @@ luarocks make
 
 the output should be like this:
 
-    amqp-client 1.0.0-1 is now installed in /usr/local (license: Apache 2.0)
+    lua-amqp 1.0.0-1 is now installed in /usr/local (license: Apache 2.0)
 
 ### Examples
 
@@ -128,5 +129,5 @@ luarocks install argparse
 Beyond dependences, the examples depends on build of this library. Other way to execute the examples less building the library is import this library from luarocks. You can do this executing this command.
 
  ```sh
- luarocks install amqp-client
+ luarocks install lua-amqp
  ```   
